@@ -1,0 +1,90 @@
+﻿.min-h-screen {
+    min-height: 45vh;
+}
+
+.min-head-screen {
+    min-height: 65vh;
+}
+
+.bg-image {
+    background-image: url('/images/c8c4fc59-33cf-4166-b76c-ad2e9481fb8a.jpeg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.separator {
+    flex-grow: 1;
+    border-bottom: azure;
+}
+
+.flex-container {
+    background-color: black;
+    padding-right: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item-right {
+    flex: 50%;
+}
+
+.course-details {
+    background-color: black;
+    padding: 20px;
+    margin-bottom: auto;
+}
+
+.p {
+    color: rgb(0, 17, 255);
+}
+
+.p1 {
+    color: blue;
+}
+
+.font {
+    font: size 100px;
+    font-style: normal;
+}
+
+.bg-color {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.bg-color1 {
+    background-color: navy;
+}
+
+.bg-color2 {
+    background-color: blue;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.elementor-element {
+    flex-direction: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+    align-items: initial;
+    align-content: initial;
+    gap: initial;
+    flex-basis: initial;
+    flex-grow: initial;
+    flex-shrink: initial;
+    order: initial;
+    align-self: initial;
+    flex-basis: var(--flex-basis);
+    flex-grow: var(--flex-grow);
+    flex-shrink: var(--flex-shrink);
+    order: var(--order);
+    align-self: var(--align-self);
+}
