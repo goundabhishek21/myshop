@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using crudemvccore.Data;
 
@@ -11,9 +12,11 @@ using crudemvccore.Data;
 namespace crudemvccore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240320052333_OrderCartModelUpdated")]
+    partial class OrderCartModelUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -402,16 +405,13 @@ namespace crudemvccore.Data.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Orderproducts");
+                    b.ToTable("orderproducts");
                 });
 
             modelBuilder.Entity("crudemvccore.Models.Product", b =>
@@ -624,7 +624,7 @@ namespace crudemvccore.Data.Migrations
             modelBuilder.Entity("crudemvccore.Models.Orderproduct", b =>
                 {
                     b.HasOne("crudemvccore.Models.Order", "Order")
-                        .WithMany("Products")
+                        .WithMany("Orderproducts")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -661,7 +661,7 @@ namespace crudemvccore.Data.Migrations
 
             modelBuilder.Entity("crudemvccore.Models.Order", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Orderproducts");
                 });
 
             modelBuilder.Entity("crudemvccore.Models.Publisher", b =>

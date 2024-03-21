@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using crudemvccore.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace crudemvccore.Models
+namespace crudemvccore.ViewModel
 {
-    public class Order
+    public class BuyNowViewModel
     {
-        public int Id { get; set; }
-        public string UserId { get; set; }
-        public IdentityUser User { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -22,7 +19,9 @@ namespace crudemvccore.Models
         public string State { get; set; }
         [Required]
         public string PinCode { get; set; }
-      
-        public virtual List<Orderproduct> Products { get; set; }
+        public string productId {  get; set; }
+        public Product product { get; set; }
+
+     
     }
 }

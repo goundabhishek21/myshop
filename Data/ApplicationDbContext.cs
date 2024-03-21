@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace crudemvccore.Data
 {
     public class ApplicationDbContext : IdentityDbContext
@@ -21,7 +22,7 @@ namespace crudemvccore.Data
         public DbSet<Publisher> Publisher { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<Orderproduct> orderproducts { get; set; }
+        public DbSet<Orderproduct> Orderproducts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
